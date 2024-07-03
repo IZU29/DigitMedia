@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+    color: #160b2d;
+}
+
+.container{
+    display: flex;
+    /* border: 1px solid white; */
+    width: 100%;
+    font-family: Montserrat , Arial;
+    align-items: center;
+    padding: 10px;
+}
+
+.container .icon{
+    display: flex;
+    /* justify-content: center; */
+    font-weight: 600;
+    width: 15%;
+    font-size: 1.5rem;
+    /* border: 1px solid red; */
+}
+.container ul{
+    display: flex;
+    width: 75%;
+    /* border: 1px solid green; */
+    /* justify-content: space-between; */
+    margin: 0;
+    padding: 0;
+}
+.container li, .container a{
+    list-style-type: none;
+    display: flex;
+    text-decoration: none;
+    color: #160b2d;
+    margin-right: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    /* border: 1px solid black; */
+    position: relative;
+    flex-direction: column;
+}
+.container li::after{
+    content: '';
+    /* margin: auto; */
+    width: 0%;
+    height: 2px;
+    background: #160b2d;
+    transition: 0.5s;
+}
+.container li:hover::after{
+    width: 80%;
+}
+.container button{
+    border: 1px solid #00e1ff;
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #160b2d;
+    transition: background 0.15s;
+}
+.container button:hover{
+    background: #00e1ff;
+    
+}
+.box{
+    /* border: 1px solid blue; */
+    margin: auto;
+    width: 70%;
+    height: 60vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.box .content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+}
+.box h1{
+    font-family: Montserrat ,sans-serif;
+    text-wrap: wrap;
+    /* border: 1px solid green; */
+    font-size: 55px;
+}
+
+.box p{
+    font-family: Montserrat ,Arial;
+    font-size: 13px;
+    /* border: 1px solid red; */
+    /* width: ; */
+}
+
+.inputs input{
+    border: none;
+    background: rgba(128, 128, 128, 0.5);
+    height: 40px;
+    width: 50%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.inputs button{
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    background: #ff9900;
+    cursor: pointer;
+}
+.image img{
+    width: 450px;
+    border-radius: 20%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+.serviceBox{
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+    font-family: Montserrat ,Arial;
+}
+.serviceBox h1 , .serviceBox p{
+    text-align: center;
+}
+.courseRow{
+    /* border: 1px solid black; */
+    
+    width: 100%;
+    display: flex;
+    height: 40vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.courseCol{
+    background: #eae9ec;
+    height: 50%;
+    width: 21%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px;
+    box-sizing: border-box;
+    /* align */
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    align-content: space-between;
+    /* border: 1px solid brown; */
+}
+.courseCol p{
+    /* border: 1px solid blue; */
+    text-align: left;
+    font-size: 12px;
+}
+.courseCol h5{
+    font-size: 20px;
+    font-weight: 800;
+}
+.courseCol:hover{
+    /* box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); */
+}
+#closebtn,#menubtn{
+    display: none;
+}
+.productslist{
+    /* border: 1px solid blue; */
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.thisProduct{
+    /* border: 1px solid red; */
+    height: 75%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.productImage{
+    background-color: #ebe8ee;
+    /* border: 1px solid green; */
+    height: 75%;
+}
+footer{
+    height: 10vh;
+    background-color: #160b2d;
+    color: WHite;
+    font-family: Montserrat,Arial;
+    padding: 10px;
+}
+footer .brand{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen  and (max-width : 720px){
+    body{
+        padding: 16px;
+    }
+    .container{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+    width: 95%;
+   }
+    .container .icon{
+        font-size: 1.4rem;
+        
+    }
+    .container ul{
+        display: none;
+        position: absolute;
+        background: red;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        text-align: left;
+        z-index: 2;
+        color: white;
+        background: #160b2d;
+        transition: 2s;
+        transition-timing-function: ease-in;
+        /* visibility: hidden; */
+        
+    }
+    .container li, .container a{
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding-top: 10%;
+        /* border: 1px solid green; */
+    }
+    .container button{
+        height: 30px;
+        width: 70px;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        /* border: 1px solid blue; */
+    }
+    .box .content{
+        width: 100%;
+        
+    }
+    .box h1{
+        font-size: 1.5rem;
+        text-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .box p{
+        font-size: 0.6rem;
+        text-wrap: wrap;
+        line-height: 1.5;
+    }
+    .image img{
+        width: 100%;
+        height: 20vh
+    }
+    .courseRow{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 55vh;
+    }
+    .courseCol{
+        margin-top: 15px;
+        width: 80%;
+        box-shadow: 0 0 0 0 ;
+    }
+    .productslist{
+        flex-direction: column;
+        width: 100%;
+        /* border: 1px solid green; */
+        margin-top: 30px;
+        height: 70vh;
+    }
+    .thisProduct{
+        width: 65%;
+        height: 80%;
+        margin-bottom: 30px;
+    }
+}
